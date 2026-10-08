@@ -5,6 +5,14 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 app = FastAPI(title="Batch Sentiment Analysis API")
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 analyzer = SentimentIntensityAnalyzer()
 
 

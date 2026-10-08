@@ -1,6 +1,7 @@
 
 from fastapi import FastAPI
 from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 app = FastAPI(title="Batch Sentiment Analysis API")
